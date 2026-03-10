@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cielo de Azúcar | Repostería Artesanal</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <a href="#" class="logo">Cielo de Azúcar</a>
+        <ul class="nav-links">
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#menu">Nuestro Menú</a></li>
+            <li><a href="#events">Eventos</a></li>
+            <li><a href="https://wa.me/1234567890" target="_blank" class="btn-whatsapp-nav"><i
+                        class="fab fa-whatsapp"></i> Pedir por WhatsApp</a></li>
+        </ul>
+        <div class="hamburger"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <header class="hero" id="hero">
+        <div class="hero-content fade-in">
+            <h1>Endulzamos cada momento</h1>
+            <p>Postres artesanales hechos en casa. Golfeados, rolles y tortas que te harán soñar.</p>
+            <a href="#menu" class="btn-hero">Descubre el Menú</a>
+        </div>
+        <div class="hero-carousel">
+            <div class="carousel-slide active" style="background-image: url('ponque_vainilla_1773084391521.png')"></div>
+            <div class="carousel-slide" style="background-image: url('ponque_chocolate_1773084499281.png')"></div>
+            <div class="carousel-slide" style="background-image: url('ponque_redvelvet_1773084598854.png')"></div>
+        </div>
+    </header>
+
+    <section class="features" id="about">
+        <div class="container feature-grid" id="feature-container">
+            <!-- Los features se cargarán dinámicamente desde script.js -->
+        </div>
+    </section>
+
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2 class="section-title">Nuestras Especialidades</h2>
+            <div class="menu-grid" id="menu-container">
+                <!-- Los menús se cargarán dinámicamente desde script.js -->
+            </div>
+        </div>
+    </section>
+
+    <section id="events" class="events-section">
+        <div class="events-content container reveal">
+            <div class="events-text">
+                <h2>Tortas para Eventos Inolvidables</h2>
+                <p>Diseñamos y horneamos tortas personalizadas para cumpleaños, bodas, bautizos y reuniones especiales.
+                </p>
+                <a href="#contact" class="btn-events">Cotizar Torta</a>
+            </div>
+            <div class="events-image">
+                <div class="glass-card">
+                    <h4>"El pastel más hermoso y delicioso de mi boda. ¡Todos querían repetir!"</h4>
+                    <span class="author">- Cliente Feliz</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="banner-cta">
+        <div class="container text-center reveal">
+            <h2>¿Se te hizo agua la boca?</h2>
+            <a href="https://wa.me/1234567890" target="_blank" class="btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> Chat de WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
