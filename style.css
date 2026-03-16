@@ -35,7 +35,8 @@ html {
 body {
     font-family: var(--font-body);
     color: var(--text-dark);
-    background: var(--bg-main);
+    background: linear-gradient(160deg, #F9E7F5 0%, #EAD0F1 40%, #F4E6F8 100%);
+    min-height: 100vh;
     line-height: 1.7;
     /* Mayor espacio entre líneas */
     font-size: 1.05rem;
@@ -90,7 +91,7 @@ h4 {
 }
 
 .navbar.scrolled {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(249, 231, 245, 0.92);
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     padding: 1rem 5%;
@@ -265,7 +266,7 @@ h4 {
 
 .features {
     padding: 5rem 0;
-    background: var(--bg-section);
+    background: rgba(249, 231, 245, 0.75);
 }
 
 .feature-grid {
@@ -372,7 +373,7 @@ h4 {
 
 .events-section {
     padding: 6rem 0;
-    background: var(--bg-section);
+    background: rgba(249, 231, 245, 0.75);
     overflow: hidden;
 }
 
