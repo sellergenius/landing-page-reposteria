@@ -1,16 +1,22 @@
 :root {
     --primary: #D35400;
-    /* Naranja más oscuro y vibrante */
+    /* Naranja vibrante para acentos y llamadas a la acción */
     --primary-light: #E67E22;
-    --text-dark: #1A120B;
-    /* Casi negro intenso para máximo contraste */
-    --text-light: #4A3E39;
-    /* Gris oscuro para legibilidad superior */
-    --bg-main: #FFFFFF;
-    /* Fondo puro para contraste máximo */
-    --bg-section: #FDF8F5;
-    /* Tono crema ultraligero */
+
+    --accent: var(--primary);
+    /* Alias semántico para facilitar futuros temas */
+
+    --text-dark: #1A0F1F;
+    /* Texto muy oscuro para legibilidad en fondos claros */
+    --text-light: #312339;
+    /* Gris violáceo oscuro para párrafos y subtítulos */
+
+    --bg-main: #F9E7F5;
+    /* Rosa con tonalidad violeta suave */
+    --bg-section: rgba(255, 255, 255, 0.85);
+    /* Fondo translúcido para secciones destacadas */
     --white: #FFFFFF;
+
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Outfit', sans-serif;
     --transition: all 0.3s ease;
@@ -58,6 +64,17 @@ h4 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 2rem;
+    color: var(--text-dark);
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    margin: 1rem auto 0;
+    border-radius: 2px;
+    background: var(--accent);
 }
 
 .navbar {
@@ -112,8 +129,8 @@ h4 {
 
 .btn-events {
     display: inline-block;
-    background: #C0392B;
-    /* Un tono rojo terracota distinto pero armónico */
+    background: var(--accent);
+    /* Acento naranja para llamadas a la acción */
     color: var(--white) !important;
     padding: 1rem 2.5rem;
     /* Más grande que el primary */
@@ -121,7 +138,7 @@ h4 {
     font-weight: 700;
     font-size: 1.15rem;
     /* Letra más grande */
-    box-shadow: 0 4px 15px rgba(192, 57, 43, 0.3);
+    box-shadow: 0 4px 15px rgba(211, 84, 0, 0.3);
     margin-top: 2.5rem;
     /* Asegura buena separación del texto de arriba */
     transition: var(--transition);
@@ -129,9 +146,9 @@ h4 {
 }
 
 .btn-events:hover {
-    background: #A93226;
+    background: #b14300;
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(192, 57, 43, 0.4);
+    box-shadow: 0 6px 20px rgba(177, 67, 0, 0.4);
 }
 
 .btn-whatsapp-nav {
@@ -165,7 +182,7 @@ h4 {
     align-items: center;
     justify-content: space-between;
     padding: 0 5%;
-    background: linear-gradient(135deg, #FAFAF7 40%, #F5EFEB 100%);
+    background: linear-gradient(135deg, rgba(249, 231, 245, 0.95) 35%, rgba(238, 214, 242, 0.95) 100%);
     position: relative;
     overflow: hidden;
 }
@@ -234,16 +251,21 @@ h4 {
     display: inline-block;
     padding: 1rem 2.5rem;
     border-radius: 50px;
-    background: var(--text-dark);
+    background: var(--accent);
     color: var(--white);
     text-decoration: none;
     font-weight: 600;
     transition: var(--transition);
 }
 
+.btn-hero:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(211, 84, 0, 0.25);
+}
+
 .features {
     padding: 5rem 0;
-    background: var(--white);
+    background: var(--bg-section);
 }
 
 .feature-grid {
@@ -350,7 +372,7 @@ h4 {
 
 .events-section {
     padding: 6rem 0;
-    background: var(--white);
+    background: var(--bg-section);
     overflow: hidden;
 }
 
