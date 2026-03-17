@@ -1,20 +1,20 @@
 const featuresData = [
     {
         icon: "fa-heart",
-        title: "Hecho en Casa",
-        desc: "Cada postre es preparado a mano, con amor y atención a los detalles diariamente.",
+        title: "Hecho en casa",
+        desc: "Cada pedido se elabora a mano con ingredientes reales y cariño de principio a fin.",
         delay: "0s"
     },
     {
-        icon: "fa-leaf",
-        title: "Ingredientes Frescos",
-        desc: "Seleccionamos la mejor materia prima para garantizar un sabor inigualable.",
+        icon: "fa-map-marker-alt",
+        title: "Entrega en tu zona",
+        desc: "Repartimos cerca de ti para que recibas tus postres lo más frescos posible.",
         delay: "0.2s"
     },
     {
-        icon: "fa-gift",
-        title: "Para Toda Ocasión",
-        desc: "Desde un antojo de tarde hasta la torta de tu celebración soñada.",
+        icon: "fa-bread-slice",
+        title: "Pedidos frescos del día",
+        desc: "Preparamos cada lote en la mañana, para que lleguen a tu mesa recién horneados.",
         delay: "0.4s"
     }
 ];
@@ -46,44 +46,48 @@ const menuData = [
     }
 ];
 
+const renderFeatures = (container) => {
+    featuresData.forEach(feature => {
+        const featureHTML = `
+            <div class="feature-card reveal" style="transition-delay: ${feature.delay};">
+                <div class="icon-box"><i class="fas ${feature.icon}"></i></div>
+                <h3>${feature.title}</h3>
+                <p>${feature.desc}</p>
+            </div>
+        `;
+        container.innerHTML += featureHTML;
+    });
+};
+
+const renderMenu = (container) => {
+    menuData.forEach(item => {
+        const badgeHTML = item.badge ? `<div class="badge">${item.badge}</div>` : '';
+        const priceHTML = item.price ? `<span class="price" style="display:block; margin-top:1rem; font-weight:bold; color:var(--primary);">${item.price}</span>` : '';
+
+        const menuHTML = `
+            <div class="menu-card reveal">
+                <div class="menu-img ${item.imgClass}">
+                    ${badgeHTML}
+                </div>
+                <div class="menu-info">
+                    <h3>${item.title}</h3>
+                    <p>${item.desc}</p>
+                    ${priceHTML}
+                </div>
+            </div>
+        `;
+        container.innerHTML += menuHTML;
+    });
+};
+
 document.addEventListener('DOMContentLoaded', () => {
     // Renderizado dinámico de Features
     const featureContainer = document.getElementById('feature-container');
-    if (featureContainer) {
-        featuresData.forEach(feature => {
-            const featureHTML = `
-                <div class="feature-card reveal" style="transition-delay: ${feature.delay};">
-                    <div class="icon-box"><i class="fas ${feature.icon}"></i></div>
-                    <h3>${feature.title}</h3>
-                    <p>${feature.desc}</p>
-                </div>
-            `;
-            featureContainer.innerHTML += featureHTML;
-        });
-    }
+    if (featureContainer) renderFeatures(featureContainer);
 
     // Renderizado dinámico de Menú
     const menuContainer = document.getElementById('menu-container');
-    if (menuContainer) {
-        menuData.forEach(item => {
-            const badgeHTML = item.badge ? `<div class="badge">${item.badge}</div>` : '';
-            const priceHTML = item.price ? `<span class="price" style="display:block; margin-top:1rem; font-weight:bold; color:var(--primary);">${item.price}</span>` : '';
-
-            const menuHTML = `
-                <div class="menu-card reveal">
-                    <div class="menu-img ${item.imgClass}">
-                        ${badgeHTML}
-                    </div>
-                    <div class="menu-info">
-                        <h3>${item.title}</h3>
-                        <p>${item.desc}</p>
-                        ${priceHTML}
-                    </div>
-                </div>
-            `;
-            menuContainer.innerHTML += menuHTML;
-        });
-    }
+    if (menuContainer) renderMenu(menuContainer);
 
     // Lógica del Navbar
     const navbar = document.getElementById('navbar');
