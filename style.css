@@ -6,10 +6,10 @@
     --accent: var(--primary);
     /* Alias semántico para facilitar futuros temas */
 
-    --text-dark: #1A0F1F;
-    /* Texto muy oscuro para legibilidad en fondos claros */
-    --text-light: #312339;
-    /* Gris violáceo oscuro para párrafos y subtítulos */
+    --text-dark: #000000;
+    /* Texto negro para alto contraste */
+    --text-light: #555555;
+    /* Gris medio para párrafos */
 
     --bg-main: #F9E7F5;
     /* Rosa con tonalidad violeta suave */
@@ -88,6 +88,7 @@ h4 {
     align-items: center;
     z-index: 1000;
     transition: var(--transition);
+    background: rgba(0, 0, 0, 0.3);
 }
 
 .navbar.scrolled {
@@ -105,6 +106,10 @@ h4 {
     text-decoration: none;
 }
 
+.navbar:not(.scrolled) .logo {
+    color: #ffffff;
+}
+
 .nav-links {
     list-style: none;
     display: flex;
@@ -117,6 +122,10 @@ h4 {
     color: var(--text-dark);
     font-weight: 500;
     transition: var(--transition);
+}
+
+.navbar:not(.scrolled) .nav-links a {
+    color: #ffffff;
 }
 
 .btn-primary {
