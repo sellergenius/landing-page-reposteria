@@ -24,7 +24,6 @@ const menuData = [
         id: "golfeados",
         title: "Golfeados Melosos",
         desc: "Suaves espirales horneados, bañados en papelón y anís, con abundante queso blanco.",
-        price: "Desde $3",
         badge: "Más Vendido",
         imgClass: "golfeados-img"
     },
@@ -32,7 +31,6 @@ const menuData = [
         id: "rolles",
         title: "Rolles de Canela",
         desc: "Masa esponjosa y canela, coronada con nuestro cremoso frosting especial.",
-        price: "Desde $3.5",
         badge: null,
         imgClass: "rolles-img"
     },
@@ -40,7 +38,6 @@ const menuData = [
         id: "porciones",
         title: "Tortas en Porciones",
         desc: "Chocolate, vainilla, red velvet y más. Perfectos para el antojito del día.",
-        price: "Desde $4",
         badge: null,
         imgClass: "slices-img"
     }
@@ -62,7 +59,6 @@ const renderFeatures = (container) => {
 const renderMenu = (container) => {
     menuData.forEach(item => {
         const badgeHTML = item.badge ? `<div class="badge">${item.badge}</div>` : '';
-        const priceHTML = item.price ? `<span class="price" style="display:block; margin-top:1rem; font-weight:bold; color:var(--primary);">${item.price}</span>` : '';
 
         const menuHTML = `
             <div class="menu-card reveal">
@@ -72,7 +68,6 @@ const renderMenu = (container) => {
                 <div class="menu-info">
                     <h3>${item.title}</h3>
                     <p>${item.desc}</p>
-                    ${priceHTML}
                 </div>
             </div>
         `;
