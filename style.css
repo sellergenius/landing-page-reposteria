@@ -560,9 +560,9 @@ h4 {
         background-position: center !important;
     }
 
-    /* En móvil mostramos solo la imagen (sin el aviso de Cliente Feliz) */
+    /* En móvil quitamos solo el aviso de Cliente Feliz, mantenemos título y botón */
     .events-text {
-        display: none !important;
+        display: block !important;
     }
 
     .events-image .glass-card,
