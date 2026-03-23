@@ -407,8 +407,14 @@ h4 {
     flex: 1;
     height: 500px;
     border-radius: 30px;
-    background: url('https://images.unsplash.com/photo-1535254973040-607b474cb50d?q=80&w=800&auto=format&fit=crop') center/cover;
+    background: url('https://images.unsplash.com/photo-1535254973040-607b474cb50d?q=80&w=1200&auto=format&fit=crop') center/cover no-repeat;
+    background-size: cover;
+    background-position: center;
     position: relative;
+}
+
+.events-image img {
+    display: none;
 }
 
 .glass-card {
@@ -547,17 +553,28 @@ h4 {
 
     .events-image {
         width: 100%;
-        height: 300px;
+        height: 320px;
         position: relative;
+        background: url('https://images.unsplash.com/photo-1535254973040-607b474cb50d?q=80&w=1200&auto=format&fit=crop') center/cover no-repeat !important;
+        background-size: cover !important;
+        background-position: center !important;
     }
 
     /* En móvil mostramos solo la imagen (sin el aviso de Cliente Feliz) */
     .events-text {
-        display: none;
+        display: none !important;
     }
 
+    .events-image .glass-card,
     .glass-card {
-        display: none;
+        display: none !important;
+    }
+
+    .events-image img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
 
