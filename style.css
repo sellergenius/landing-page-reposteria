@@ -414,7 +414,7 @@ h4 {
 .glass-card {
     position: absolute;
     bottom: -2rem;
-    left: -2rem;
+    right: -2rem;
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(15px);
     padding: 2rem;
@@ -557,7 +557,9 @@ h4 {
         top: auto;
         margin-top: 2rem;
         margin-left: 0;
-        max-width: 100%;
+        max-width: 85%;
+        padding: 1.2rem;
+        font-size: 0.9rem;
     }
 }
 
