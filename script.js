@@ -1,11 +1,3 @@
-/**
- * DATA SECTION
- * ============
- * Datos estáticos para mantener la lógica de renderizado separada del contenido.
- * Fácil de actualizar o conectar a una API en el futuro.
- */
-
-// Características de confianza y autenticidad de la marca
 const featuresData = [
     {
         icon: "fa-heart",
@@ -27,7 +19,6 @@ const featuresData = [
     }
 ];
 
-// Catálogo de productos del menú
 const menuData = [
     {
         id: "golfeados",
@@ -52,17 +43,6 @@ const menuData = [
     }
 ];
 
-/**
- * RENDER FUNCTIONS
- * ================
- * Funciones reutilizables para renderizar componentes dinámicos.
- * Mantienen la lógica de presentación separada de los datos.
- */
-
-/**
- * Renderiza la sección de características (confianza y autenticidad)
- * @param {HTMLElement} container - Contenedor donde se insertará el HTML generado
- */
 const renderFeatures = (container) => {
     featuresData.forEach(feature => {
         const featureHTML = `
@@ -76,10 +56,6 @@ const renderFeatures = (container) => {
     });
 };
 
-/**
- * Renderiza la sección del menú de productos
- * @param {HTMLElement} container - Contenedor donde se insertará el HTML generado
- */
 const renderMenu = (container) => {
     menuData.forEach(item => {
         const badgeHTML = item.badge ? `<div class="badge">${item.badge}</div>` : '';
@@ -99,32 +75,23 @@ const renderMenu = (container) => {
     });
 };
 
-/**
- * INITIALIZATION & EVENT LISTENERS
- * ================================
- * Se ejecuta cuando el DOM está completamente cargado.
- * Aquí se centralizan todas las inicializaciones e listeners.
- */
 document.addEventListener('DOMContentLoaded', () => {
-    // ---- Renderizado dinámico de secciones ----
-    // Renderiza la sección de características (confianza)
+    // Renderizado dinámico de Features
     const featureContainer = document.getElementById('feature-container');
     if (featureContainer) renderFeatures(featureContainer);
 
-    // Renderiza la sección del menú de productos
+    // Renderizado dinámico de Menú
     const menuContainer = document.getElementById('menu-container');
     if (menuContainer) renderMenu(menuContainer);
 
-    // ---- Lógica del Navbar (efecto scroll) ----
-    // Cambia estilos del navbar cuando el usuario hace scroll
+    // Lógica del Navbar
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) navbar.classList.add('scrolled');
         else navbar.classList.remove('scrolled');
     });
 
-    // ---- Lógica del menú hamburguesa (mobile) ----
-    // Abre/cierra el menú en dispositivos móviles
+    // Lógica menú hamburguesa
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     hamburger.addEventListener('click', () => {
@@ -139,8 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // ---- Carrusel del Hero (rotación de imágenes) ----
-    // Cambia automáticamente las imágenes del carrusel cada 3 segundos
+    // Lógica del carrusel Hero
     const slides = document.querySelectorAll('.carousel-slide');
     if (slides.length > 0) {
         let currentSlide = 0;
@@ -151,8 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 3000); // Cambia cada 3 segundos
     }
 
-    // ---- Animaciones al scroll (reveal effect) ----
-    // Activa animaciones cuando los elementos entran al viewport
+    // Lógica animaciones al scroll
     const revealOnScroll = () => {
         const reveals = document.querySelectorAll('.reveal');
         const windowHeight = window.innerHeight;
@@ -163,6 +128,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
     window.addEventListener('scroll', revealOnScroll);
-    // Ejecutar immediatamente después de cargar para animar elementos visibles inicialmente
+    // Timeout breve para permitir que el DOM renderizado se calcule
     setTimeout(revealOnScroll, 100);
 });

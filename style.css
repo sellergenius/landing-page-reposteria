@@ -1,27 +1,19 @@
 :root {
     --primary: #7B2CBF;
-    /* Violeta cálido actualizado */
+    /* Violeta cálido */
     --primary-light: #8A2BE2;
     /* Violeta claro */
     --accent-orange: #FF9E00;
     /* Naranja perceptible */
     --primary-gradient: linear-gradient(135deg, #7B2CBF 0%, #FF9E00 100%);
     /* Degradado violeta a naranja */
-
     --accent: var(--primary);
-    /* Alias semántico para facilitar futuros temas */
-
     --text-dark: #000000;
-    /* Texto negro para alto contraste */
     --text-light: #555555;
-    /* Gris medio para párrafos */
-
     --bg-main: #FDF2F9;
-    /* Rosa-violeta muy suave (actualizado) */
+    /* Rosa-violeta muy suave */
     --bg-section: rgba(255, 255, 255, 0.85);
-    /* Fondo translúcido para secciones destacadas */
     --white: #FFFFFF;
-
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Outfit', sans-serif;
     --transition: all 0.3s ease;
@@ -155,18 +147,17 @@ h4 {
     font-weight: 600;
     box-shadow: 0 4px 15px rgba(106, 13, 173, 0.3);
 }
-primary-gradient);
-    /* Degradado violeta-naranja para llamadas a la acción */
+
+.btn-events {
+    display: inline-block;
+    background: var(--primary-gradient);
     color: var(--white) !important;
     padding: 1rem 2.5rem;
-    /* Más grande que el primary */
     border-radius: 50px;
     font-weight: 700;
     font-size: 1.15rem;
-    /* Letra más grande */
     box-shadow: 0 4px 15px rgba(123, 44, 191, 0.3);
     margin-top: 2.5rem;
-    /* Asegura buena separación del texto de arriba */
     transition: var(--transition);
     text-decoration: none;
 }
@@ -174,10 +165,7 @@ primary-gradient);
 .btn-events:hover {
     background: linear-gradient(135deg, #6a1fa8 0%, #E68A00 100%);
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(123, 44, 191
-    background: #5a0b8a;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(106, 13, 173, 0.4);
+    box-shadow: 0 6px 20px rgba(123, 44, 191, 0.4);
 }
 
 .btn-whatsapp-nav {
@@ -277,8 +265,11 @@ primary-gradient);
 }
 
 .btn-hero {
-    display: inline-blprimary-gradient);
+    display: inline-block;
+    background: var(--primary-gradient);
     color: var(--white);
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
     transition: var(--transition);
@@ -286,10 +277,7 @@ primary-gradient);
 
 .btn-hero:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(123, 44, 191, 0.3
-.btn-hero:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(106, 13, 173, 0.25);
+    box-shadow: 0 10px 20px rgba(123, 44, 191, 0.3);
 }
 
 .features {
@@ -354,7 +342,7 @@ primary-gradient);
 
 .menu-card:hover {
     transform: translateY(-15px);
-}42
+}
 
 .menu-img {
     height: 420px;
@@ -434,7 +422,7 @@ primary-gradient);
     max-width: 300px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
-var(--primary-gradient
+
 .banner-cta {
     padding: 5rem 0;
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
@@ -559,18 +547,16 @@ var(--primary-gradient
 
     .events-image {
         width: 100%;
+        height: 300px;
     }
 
     .glass-card {
         position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
         bottom: auto;
         left: auto;
+        top: auto;
         margin-top: 2rem;
         margin-left: 0;
-        width: 100%;
         max-width: 100%;
     }
 }
@@ -586,8 +572,5 @@ footer {
 
 footer p {
     margin: 0.5rem 0;
-    font-weight: 300;   left: 1rem;
-        top: 1rem;
-        bottom: auto;
-    }
+    font-weight: 300;
 }
