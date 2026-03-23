@@ -549,17 +549,16 @@ h4 {
         width: 100%;
         height: 300px;
         position: relative;
-        margin-bottom: 160px;
     }
 
     .glass-card {
         position: absolute;
-        bottom: -140px;
+        bottom: -180px;
         left: 50%;
         transform: translateX(-50%);
         margin-top: 0;
         margin-left: 0;
-        max-width: 85%;
+        max-width: 80%;
         padding: 1rem;
         font-size: 0.85rem;
     }
