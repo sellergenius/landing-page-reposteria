@@ -551,15 +551,15 @@ h4 {
     }
 
     .glass-card {
-        position: relative;
-        bottom: auto;
-        left: auto;
-        top: auto;
-        margin-top: 2rem;
+        position: absolute;
+        bottom: -160px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 0;
         margin-left: 0;
-        max-width: 85%;
-        padding: 1.2rem;
-        font-size: 0.9rem;
+        max-width: 80%;
+        padding: 1rem;
+        font-size: 0.85rem;
     }
 }
 
